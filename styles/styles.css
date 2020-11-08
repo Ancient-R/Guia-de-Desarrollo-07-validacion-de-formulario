@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    background-color: #f3f3f3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-container{
+    width: 100%;
+    /*  Esas líneas de código nos ayudan a 
+        centrar totalmente el formulario */
+    
+    /* Altura de todo el viewport hight, es decir
+        que ocupe todo el alto de la pantalla */
+    height: 100vh;
+    display: flex;
+    /*  Por defecto, flex-direction es row, pero queremos 
+        que el formulario se muestre abajo de la imagen o icono
+        y no a lado */
+    flex-direction: column;
+
+    /*  justify-content; centra los elementos verticalmente,
+        pero ten en cuenta que es porque el flex-direction es column,
+        si fuera row, lo centraria horizontalmente
+
+    */
+    justify-content: center;
+    /* align-items; centra los elementos horizontalmente,
+        pero ten en cuenta que es porque el flex-direction es column,
+        si fuera row, lo centraria verticalmente
+     */
+    align-items: center;
+}
+
+.form-title{
+    text-align: center;
+}
+
+.form{
+    /*  max-width; sirve para indicar el máximo ancho
+        que puede tomar el formulario, no importa 
+        el tamaño de pantalla, al final, su máximo ancho
+        será 500px */
+    max-width: 500px;
+    width: 80%;
+    padding: 2rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+.form-label{
+    margin-bottom: 2px;
+}
+
+.form-input,
+.form-submit{
+    padding: .5rem;
+    border-radius: 3px;
+    border: none;
+
+    /*  Cambia el color del borde del input
+        cuando éste tiene el foco
+     */
+    outline-color: #007bfe;
+}
+
+.form-submit{
+    background-color: #007bfe;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+    /* transition; lo aplicamos para que el background-color
+        en el hover no cambie bruscamente */
+    transition: background-color .5s ease;
+}
+
+/*  media query para dispositivos con pantallas grandes */
+@media screen and ( min-width: 1024px ){
+    .form-submit:hover{
+        background-color: #2f8df2;
+        cursor: pointer;
+    }
+}
